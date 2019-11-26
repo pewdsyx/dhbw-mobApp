@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClick(View aView) {
         System.out.println("onButtonClick");
         TextView textView = findViewById(R.id.textToChange);
-        textView.setText(Integer.toString(12));
+        EditText editView = findViewById(R.id.editText);
+        textView.setText(editView.getText());
     }
 }
