@@ -7,12 +7,199 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Street Counter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <Button
+        android:id="@+id/car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="22dp"
+        android:text="Car"
+        app:layout_constraintBottom_toTopOf="@+id/pedestrians"
+        app:layout_constraintEnd_toStartOf="@+id/carV"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pedestrians"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="14dp"
+        android:text="pedestrians"
+        app:layout_constraintBottom_toTopOf="@+id/bicycles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car" />
+
+    <Button
+        android:id="@+id/bicycles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="17dp"
+        android:text="bicycles"
+        app:layout_constraintBottom_toTopOf="@+id/motorcycles"
+        app:layout_constraintEnd_toStartOf="@+id/bikeView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedestrians" />
+
+    <Button
+        android:id="@+id/motorcycles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="7dp"
+        android:text="motorcycles"
+        app:layout_constraintBottom_toTopOf="@+id/busses"
+        app:layout_constraintEnd_toStartOf="@+id/motorView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bicycles" />
+
+    <Button
+        android:id="@+id/busses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="25dp"
+        android:text="busses"
+        app:layout_constraintBottom_toTopOf="@+id/trucks"
+        app:layout_constraintEnd_toStartOf="@+id/bussesView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motorcycles" />
+
+    <Button
+        android:id="@+id/trucks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="49dp"
+        android:text="trucks"
+        app:layout_constraintBottom_toTopOf="@+id/oneUp"
+        app:layout_constraintEnd_toStartOf="@+id/trucksView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/oneUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <Button
+        android:id="@+id/fiveUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="196dp"
+        android:text="+5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
+        app:layout_constraintStart_toEndOf="@+id/oneUp"
+        app:layout_constraintTop_toBottomOf="@+id/trucksView" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="487dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="196dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fiveUp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="184dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/pedView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/bikeView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pedestrians"
+        app:layout_constraintTop_toBottomOf="@+id/carV" />
+
+    <TextView
+        android:id="@+id/bikeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="185dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bicycles"
+        app:layout_constraintTop_toBottomOf="@+id/pedView" />
+
+    <TextView
+        android:id="@+id/motorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="185dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/motorcycles"
+        app:layout_constraintTop_toBottomOf="@+id/bikeView" />
+
+    <TextView
+        android:id="@+id/bussesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="172dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motorView" />
+
+    <TextView
+        android:id="@+id/trucksView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="39dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/fiveUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trucks"
+        app:layout_constraintTop_toBottomOf="@+id/bussesView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
