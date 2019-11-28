@@ -82,13 +82,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickAdd(View aView) {
         TextView view = findViewById(R.id.zustand);
-        mOffnungsrate+=1;
-        view.setText(Integer.toString(mOffnungsrate));
+        if (mOffnungsrate < 100 && mOffnungsrate >= 0) {
+            mOffnungsrate+=1;
+            view.setText(Integer.toString(mOffnungsrate).concat("%"));
+        }
+
     }
 
     public void onClickDel(View aView) {
         TextView view = findViewById(R.id.zustand);
-        mOffnungsrate-=1;
-        view.setText(Integer.toString(mOffnungsrate));
+        if (mOffnungsrate > 0 && mOffnungsrate <= 100) {
+            mOffnungsrate-=1;
+            view.setText(Integer.toString(mOffnungsrate).concat("%"));
+        }
+
     }
 }
