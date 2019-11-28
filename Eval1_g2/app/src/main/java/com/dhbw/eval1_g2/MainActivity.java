@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickAnAus(View aView){
         Button btn = (Button) findViewById(aView.getId());
         TextView view = findViewById(R.id.fehler);
+        view.setText("keine Fehler");
         switch (btn.getId()){
             case R.id.fenster:
                 if (mFensterB == false) {
@@ -77,5 +78,17 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+    public void onClickAdd(View aView) {
+        TextView view = findViewById(R.id.zustand);
+        mOffnungsrate+=1;
+        view.setText(Integer.toString(mOffnungsrate));
+    }
+
+    public void onClickDel(View aView) {
+        TextView view = findViewById(R.id.zustand);
+        mOffnungsrate-=1;
+        view.setText(Integer.toString(mOffnungsrate));
     }
 }
