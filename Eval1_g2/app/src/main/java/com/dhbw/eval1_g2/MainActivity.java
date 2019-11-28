@@ -33,18 +33,37 @@ public class MainActivity extends AppCompatActivity {
         Button btn = (Button) findViewById(aView.getId());
         switch (btn.getId()){
             case R.id.fenster:
-                btn.setText(mFenster);
                 if (mFensterB == false) {
                     // fenster ist zu
                     btn.setText(mFenster);
                     mFensterB = true;
+                } else {
+                    // fenster offen
+                    btn.setText(mFensterN);
+                    mFensterB = false;
                 }
                 break;
             case R.id.heizung:
-                // do something
+                if (mHeizungB == false) {
+                    // fenster ist zu
+                    btn.setText(mHeizung);
+                    mHeizungB = true;
+                } else {
+                    // fenster offen
+                    btn.setText(mHeizungN);
+                    mHeizungB = false;
+                }
                 break;
             case R.id.licht:
-                // do something
+                if (mLichtB == false) {
+                    // fenster ist zu
+                    btn.setText(mLicht);
+                    mLichtB = true;
+                } else {
+                    // fenster offen
+                    btn.setText(mLichtN);
+                    mLichtB = false;
+                }
                 break;
         }
     }
