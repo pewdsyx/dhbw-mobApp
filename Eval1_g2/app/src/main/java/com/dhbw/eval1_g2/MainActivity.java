@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean mLichtB = false;
 
     private int mOffnungsrate = 0; // 0-100
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
