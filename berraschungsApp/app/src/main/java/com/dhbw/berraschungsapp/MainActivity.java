@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener, Runnable {
 
-    private TextView textView;
+    private TextView surprise;
     private SensorManager sensorManager;
     private Sensor lightSensor;
 
@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.textView = findViewById(R.id.surprise);
-        this.textView.setText("");
+        this.surprise = findViewById(R.id.surprise);
+        this.surprise.setText("");
 
         // getting my SensorManager:
         this.sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     //SensorEventListner methods:
     @Override
     public void onSensorChanged(SensorEvent event) {
-        this.textView.setText("Surprise!");
+        this.surprise.setText("Surprise!");
     }
 
     @Override
