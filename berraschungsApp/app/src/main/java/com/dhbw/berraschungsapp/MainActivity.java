@@ -10,6 +10,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener, Runnable {
@@ -29,9 +30,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         this.lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     }
-    
+
     // button click handler:
     public void onClickStart(View aView) {
+        Button myButton = (Button) aView;
+        myButton.setText("schnell, schnell");
         Handler handler = new Handler();
         handler.postDelayed(this, 5000);
     }
