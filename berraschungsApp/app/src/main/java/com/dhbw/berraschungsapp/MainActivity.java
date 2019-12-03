@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private SensorManager sensorManager;
     private Sensor lightSensor;
 
+    private final double LIGHT_BORDER = 125.0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onSensorChanged(SensorEvent event) {
         // change only if there is light present
         double lightValue = event.values[0];
-        if (lightValue >= 125.0) {
+        if (lightValue >= LIGHT_BORDER) {
             this.surprise.setText("Surprise!");
             this.sensorManager.unregisterListener(this,this.lightSensor);
         }
