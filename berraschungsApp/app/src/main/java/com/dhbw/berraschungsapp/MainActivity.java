@@ -43,8 +43,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     public void onSensorChanged(SensorEvent event) {
         // change only if there is light present
-        if (event.values[0] != 0.0) {
+        double lightValue = event.values[0];
+        if (lightValue >= 125.0) {
             this.surprise.setText("Surprise!");
+            this.sensorManager.unregisterListener(this,this.lightSensor);
         }
     }
 
