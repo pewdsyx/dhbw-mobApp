@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.textView = findViewById(R.id.surprise);
         this.textView.setText("");
 
+        // getting my SensorManager
         this.sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         this.lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     }
