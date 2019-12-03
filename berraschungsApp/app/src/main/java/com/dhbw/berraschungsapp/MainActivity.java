@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private EditText lightThresholdText;
     private SensorManager sensorManager;
     private Sensor lightSensor;
-    private double lightThreshold = 125;
+    private double lightThreshold = 30;
 
 
     @Override
