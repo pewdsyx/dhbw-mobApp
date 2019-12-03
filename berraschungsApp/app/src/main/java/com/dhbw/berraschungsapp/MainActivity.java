@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         this.lightSensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
     }
-
-
+    
+    // button click handler:
     public void onClickStart(View aView) {
         Handler handler = new Handler();
         handler.postDelayed(this, 5000);
