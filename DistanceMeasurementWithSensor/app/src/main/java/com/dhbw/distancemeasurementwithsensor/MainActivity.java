@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
             double s = (a/2)* Math.pow(currentTime, 2) + v * currentTime;
 
-            System.out.println("a: " + a);
+            /*System.out.println("a: " + a);
             System.out.println("v: " + v);
-            System.out.println("s: " + s);
+            System.out.println("s: " + s);*/
 
             this.distance += s;
 
