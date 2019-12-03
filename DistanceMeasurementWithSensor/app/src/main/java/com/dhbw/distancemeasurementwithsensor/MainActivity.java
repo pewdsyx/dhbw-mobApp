@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         // 2nd -> infinite run:
         if (event.timestamp != this.oldTimestamp) {
             this.newTimestamp = event.timestamp;
-            long currentTime = this.newTimestamp - this.oldTimestamp;
+            long currentTime = (this.newTimestamp - this.oldTimestamp) / 1000; // in seconds
             // calculation
 
             double a = Math.sqrt(Math.pow(event.values[0], 2) + Math.pow(event.values[1], 2) + Math.pow(event.values[2], 2));
