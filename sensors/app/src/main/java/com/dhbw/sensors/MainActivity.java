@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     // Interface methods from SensorEventListner:
     @Override
     public void onSensorChanged(SensorEvent event) {
-
+        System.out.println(event.values[0]);
     }
 
     @Override
