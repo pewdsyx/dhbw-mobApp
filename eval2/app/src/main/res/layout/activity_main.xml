@@ -7,12 +7,73 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/bewegungseinheitView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="49dp"
+        android:text="Bewegung: 0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/bewegungseinheitStarten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="31dp"
+        android:onClick="onClickStart"
+        android:text="Bewegungseinheit start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/verbleibendeBewegung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="verbleibende: 4"
+        app:layout_constraintEnd_toEndOf="@+id/bewegungseinheitView"
+        app:layout_constraintTop_toBottomOf="@+id/bewegungseinheitView" />
+
+    <TextView
+        android:id="@+id/restzeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="35dp"
+        android:text="Zeit: 0"
+        app:layout_constraintStart_toStartOf="@+id/bewegungseinheitStarten"
+        app:layout_constraintTop_toBottomOf="@+id/bewegungseinheitStarten" />
+
+    <TextView
+        android:id="@+id/erfolgreicheBewegung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="27dp"
+        android:text="erfolgreich: 0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/restzeit"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/schwellwert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="271dp"
+        android:ems="10"
+        android:hint="1"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Schwellwert (1)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="25dp"
+        android:text="schwellwert"
+        app:layout_constraintBottom_toTopOf="@+id/schwellwert"
+        app:layout_constraintStart_toStartOf="@+id/schwellwert" />
 </androidx.constraintlayout.widget.ConstraintLayout>
