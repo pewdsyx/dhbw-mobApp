@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onClickStart(View aView) {
         this.btn = (Button) findViewById(aView.getId());
         btn.setText("Messung läuft");
+        this.data_threshold = Integer.parseInt(this.threshold.getText().toString());
 
         /*long startTime = System.currentTimeMillis();
         long endTime = startTime + 1000;
@@ -103,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         double z = event.values[2];
 
         //movement calc:
-        
+
     }
 
     @Override
