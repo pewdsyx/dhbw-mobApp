@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // sensor shit
         this.sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         this.whatEverFuckHeWants = this.sensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);
 
@@ -34,6 +35,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     // button handler:
     public void onClickStart(View aView) {
+
+        long endTime = System.currentTimeMillis() + 2000; // 2 sec
+        while (System.currentTimeMillis() < endTime) {
+            // do something for 2 secs:
+        }
         // aktivate sensor:
         // this.sensorManager.registerListener(this, this.whatEverFuckHeWants, SensorManager.SENSOR_DELAY_NORMAL);
     }
