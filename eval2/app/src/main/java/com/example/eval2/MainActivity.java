@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         //movement calc:
         
-
     }
 
     @Override
