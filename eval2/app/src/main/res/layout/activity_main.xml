@@ -40,17 +40,17 @@
         android:id="@+id/restzeit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="56dp"
         android:text="Zeit: 0"
-        app:layout_constraintStart_toStartOf="@+id/bewegungseinheitStarten"
-        app:layout_constraintTop_toBottomOf="@+id/bewegungseinheitStarten" />
+        app:layout_constraintBottom_toTopOf="@+id/schwellwert"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/erfolgreicheBewegung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="27dp"
+        android:layout_marginEnd="156dp"
         android:text="erfolgreich: 0"
         app:layout_constraintBaseline_toBaselineOf="@+id/restzeit"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -67,13 +67,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Schwellwert (1)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="25dp"
-        android:text="schwellwert"
-        app:layout_constraintBottom_toTopOf="@+id/schwellwert"
-        app:layout_constraintStart_toStartOf="@+id/schwellwert" />
 </androidx.constraintlayout.widget.ConstraintLayout>
