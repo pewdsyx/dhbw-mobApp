@@ -1,6 +1,8 @@
 package com.example.listemitrecyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -22,5 +24,10 @@ public class MainActivity extends AppCompatActivity {
         mData.add("1");
 
         MyAdapter myAdapter = new MyAdapter(mData);
+        RecyclerView myRecyclerView = findViewById(R.id.recyclerView);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        myRecyclerView.setLayoutManager(layoutManager);
+        myRecyclerView.setAdapter(myAdapter);
+
     }
 }

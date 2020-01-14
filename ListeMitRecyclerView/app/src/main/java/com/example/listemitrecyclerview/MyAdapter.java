@@ -1,5 +1,7 @@
 package com.example.listemitrecyclerview;
 
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -7,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter {
+public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     ArrayList<String> mData;
 
@@ -15,20 +17,25 @@ public class MyAdapter extends RecyclerView.Adapter {
         this.mData = aData;
     }
 
-    
+
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View newView = inflater.inflate(R.layout.onerowlayout, parent,false);
+
+        //MyViewHolder myViewHolder = new MyViewHolder(newView);
+
+        return new MyViewHolder(newView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        holder.mTextView.setText(mData.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mData.size();
     }
 }
