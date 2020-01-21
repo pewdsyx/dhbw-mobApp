@@ -11,10 +11,10 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
-    ArrayList<String> mData;
+    ArrayList<Product> mData;
 
-    public MyAdapter(ArrayList<String> aData){
-        this.mData = aData;
+    public MyAdapter(ArrayList<Product> aProduct){
+        this.mData = aProduct;
     }
 
 
@@ -31,7 +31,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.mTextView.setText(mData.get(position));
+        holder.mTextView.setText(mData.get(position).mAmount + " " + mData.get(position).mName);
     }
 
     @Override
