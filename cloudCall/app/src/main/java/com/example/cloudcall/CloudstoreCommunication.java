@@ -2,10 +2,13 @@ package com.example.cloudcall;
 
 import android.os.AsyncTask;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CloudstoreCommunication extends AsyncTask<String, Integer, String> {
@@ -33,5 +36,21 @@ public class CloudstoreCommunication extends AsyncTask<String, Integer, String> 
         }
 
         return null;
+    }
+
+    @Override
+    protected void onPostExecute(String aResponse) {
+        // access to UI and all views
+        try {
+            JSONArray jsonArray = new JSONArray(aResponse);
+
+            for (int i = 0; i < jsonArray.length(); i++){
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                System.out.println(jsonObject.getString("key"));
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }
