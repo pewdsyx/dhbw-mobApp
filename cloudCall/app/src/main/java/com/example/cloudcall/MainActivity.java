@@ -12,6 +12,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CloudstoreCommunication communication = new CloudstoreCommunication();
-        communication.execute("");
+        communication.execute("https://webtechlecture.appspot.com/cloudstore/listkeys?owner=maxi");
     }
 }

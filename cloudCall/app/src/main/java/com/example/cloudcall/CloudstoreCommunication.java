@@ -17,7 +17,7 @@ public class CloudstoreCommunication extends AsyncTask<String, Integer, String> 
     protected String doInBackground(String... strings) {
 
         try {
-            URL url = new URL("https://webtechlecture.appspot.com/cloudstore/listkeys?owner=maxi");
+            URL url = new URL(strings[0]);
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()));
 
             String line = null;
@@ -29,7 +29,7 @@ public class CloudstoreCommunication extends AsyncTask<String, Integer, String> 
                 }
             } while (line != null);
 
-            System.out.println(response);
+            //System.out.println(response);
 
         } catch (IOException e) {
             e.printStackTrace();
