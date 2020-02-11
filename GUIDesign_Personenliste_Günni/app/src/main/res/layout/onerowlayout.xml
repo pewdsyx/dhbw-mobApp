@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/titelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/imageview"
+                android:text="TextView"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/detailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titelTV"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/imageview"
+                android:text="TextView"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="146dp"
+                android:layout_height="129dp"
+                app:srcCompat="@drawable/ic_female_solid" />
+
+            <TextView
+                android:id="@+id/interesseTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="Interesse"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

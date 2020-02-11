@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proza_libre_semibold"
+        android:includeFontPadding="true"
+        android:text="Personenliste"
+        android:textColor="@color/colorIcon"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Zeigt alle Personen an und gibt das Interessensgebiet visuell wieder."
+        android:textColor="@color/colorIcon"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:paddingTop="15dp"
+        android:text="ANLEITUNG"
+        android:textColor="@color/colorIcon"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:paddingTop="5dp"
+        android:text="Bei Klick auf eine Personenkarte wird diese hervorgehoben. Personen mit Interesse an Sport werden grün, mit Interesse am Lesen werden Orange und mit Interesse an Serien gelb dargestellt. Der Klick auf Plus fügt eine weitere Person der Liste hinzu."
+        android:textColor="@color/colorSecText"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="15dp" />
+
+</LinearLayout>
