@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorAccent">#212121</color>
+    <color name="colorIcon">#212121</color>
+    <color name="colorLesen">#ffd54f</color>
+    <color name="colorSport">#ffa000</color>
+    <color name="colorSerien">#ff8f00</color>
+    <color name="colorSecText">#757575</color>
+</resources>

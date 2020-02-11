@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/proza_libre_semibold"
+        android:text="Personenliste"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/topicText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Zeigt alle Personen an und gibt das Interessensgebiet visuell wieder."
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/subTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_light"
+        android:text="ANLEITUNG"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Bei Klick auf eine Personenkarte wird diese hervorgehoben. Personen mit Interesse an Sport werden grün, mit Interesse an Lesen werden organge und mit Interesse an Serienschauen gelb dargestellt. Der Klick auf Plus fügt eine weitere Person der Liste hinzu. "
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
